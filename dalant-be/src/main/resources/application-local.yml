@@ -1,0 +1,5 @@
+# application-local.yml 설정
+spring:
+  config:
+    activate:
+      on-profile: local

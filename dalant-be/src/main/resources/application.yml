@@ -1,0 +1,17 @@
+# application.yml 설정
+spring:
+  profiles:
+    active: prod
+  devtools:
+    livereload:
+      enabled: true
+
+# server 관련 설정
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
