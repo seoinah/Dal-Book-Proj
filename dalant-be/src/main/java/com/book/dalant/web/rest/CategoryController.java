@@ -25,10 +25,10 @@ public class CategoryController {
                   "* offset 파라미터 : 몇 번째 page 인지 \n\n" +
                   "   * ex) 0 \n\n" +
                   "* pageSize 파라미터 : page 크기 \n\n" +
-                  "   * ex) 10" +
+                  "   * ex) 10 \n\n" +
                   "* categoryType 파라미터 : " +
                   "   * INCOME / SPENDING / (x) \n\n" +
-                  "   * 파라미터 미전송 시에는 전체 조회"
+                  "   * 파라미터 미전송 시에는 전체 조회 \n\n"
   )
   public Result getCategory(
           @RequestParam int offset,
@@ -66,7 +66,16 @@ public class CategoryController {
   @DeleteMapping("{categoryId}")
   @Operation(
           summary = "상위 항목 삭제",
-          description = "상위 항목을 삭제한다. \n\n"
+          description = "상위 항목을 삭제한다. \n\n" +
+                  "* custom error code: 하위 항목이 존재하는 경우\n\n" +
+                  "   ``` \n\n" +
+                  "   {\n" +
+                  "     \"code\": \"1003\",\n" +
+                  "     \"message\": \"SubCategory exists\",\n" +
+                  "     \"status\": 424,\n" +
+                  "     \"data\": null\n" +
+                  "   }\n\n" +
+                  "   ```\n\n"
   )
   public Result deleteCategory(@PathVariable String categoryId) {
     return Result.ok(categoryService.deleteCategory(categoryId));
