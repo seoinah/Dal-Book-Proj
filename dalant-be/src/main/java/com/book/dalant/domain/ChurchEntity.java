@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+@Table(name = "CHURCH")
 @Getter
 @Setter
 public class ChurchEntity extends AbstractAuditingEntity {
