@@ -31,8 +31,8 @@ public class CategoryController {
                   "   * 파라미터 미전송 시에는 전체 조회 \n\n"
   )
   public Result getCategory(
-          @RequestParam int offset,
-          @RequestParam int pageSize,
+          @RequestParam(defaultValue = "0") int offset,
+          @RequestParam(defaultValue = "10") int pageSize,
           @RequestParam(required = false) CategoryConstant.CategoryType categoryType) {
     return Result.okWithPaging(categoryService.getCategory(offset, pageSize, categoryType));
   }
