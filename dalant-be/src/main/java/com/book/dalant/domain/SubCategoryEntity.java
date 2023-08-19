@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
+@Table(name = "SUB_CATEGORY")
 @Getter
 @Setter
 public class SubCategoryEntity extends AbstractAuditingEntity {
