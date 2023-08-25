@@ -1,8 +1,8 @@
 import { Layout, Space } from 'antd';
 import {Routes, Route} from 'react-router-dom'
-import {contentStyle} from "@component/templates/Layout/Layout.styles";
-import {Lnb} from "@component/organisms/Lnb/Lnb";
 import {allRoutes} from "@common/routes/allRoutes";
+import {contentStyle} from "@components/templates/Layout/Layout.styles";
+import {Lnb} from "@components/organisms/Lnb/Lnb";
 const {Content} = Layout;
 
 const LayoutDiv = () => {
