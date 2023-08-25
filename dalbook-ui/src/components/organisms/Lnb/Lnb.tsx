@@ -5,10 +5,9 @@ import {
     UserOutlined,
     VideoCameraOutlined,
 } from '@ant-design/icons';
-import { Layout, Menu, Button, Tooltip } from 'antd';
 import useToggle from "@common/hooks/useToggle";
-import {foldBtnStyle, lnbLogoStyle, siderStyle} from "@components/organisms/Lnb/Lnb.styles";
-const { Sider } = Layout;
+import {CustomSider, FoldButton, lnbLogoStyle} from "@components/organisms/Lnb/Lnb.styles";
+import {Tooltip, Menu} from "antd";
 
 const menu = [
     {
@@ -28,11 +27,11 @@ const menu = [
     },
 ]
 
-export const Lnb = () => {
+const Lnb = () => {
     const [fold, setFold] = useToggle();
 
     return (
-        <Sider trigger={null} collapsible collapsed={fold} style={siderStyle}>
+        <CustomSider trigger={null} collapsible collapsed={fold} >
             <div className="demo-logo-vertical" style={lnbLogoStyle}/>
             <Menu
                 theme="dark"
@@ -41,13 +40,14 @@ export const Lnb = () => {
                 items={menu}
             />
             <Tooltip title="Menu">
-                <Button
-                    style={foldBtnStyle}
+                <FoldButton
                     shape="circle"
                     icon={fold ? <RightOutlined /> : <LeftOutlined />}
                     onClick={() => setFold(!fold)}
                 />
             </Tooltip>
-        </Sider>
+        </CustomSider>
     );
 };
+
+export default Lnb;

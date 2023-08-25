@@ -2,7 +2,7 @@ import { Layout } from 'antd';
 import {Routes, Route} from 'react-router-dom'
 import {allRoutes} from "@common/routes/allRoutes";
 import {contentStyle, wrapStyle} from "@components/templates/Layout/Layout.styles";
-import {Lnb} from "@components/organisms/Lnb/Lnb";
+import Lnb from "@components/organisms/Lnb/Lnb";
 const {Content} = Layout;
 
 const LayoutDiv = () => {
