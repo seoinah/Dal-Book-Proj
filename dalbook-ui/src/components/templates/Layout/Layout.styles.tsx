@@ -1,16 +1,22 @@
 import React from "react";
+import styled from "styled-components";
+import {Layout} from "antd";
 
-export const contentStyle: React.CSSProperties = {
-    margin: '24px 16px',
-    padding: 24,
-    minHeight: 280,
-    color: '#fff',
-    backgroundColor: '#108ee9',
-};
+export const WrapLayout = styled(Layout)`
+    margin: 2em;
+    background-color: #f8f3fc;
+`
 
-export const wrapStyle: React.CSSProperties = {
-    display: 'flex',
-    minWidth: '1440px',
-    minHeight: '100vh'
-};
+export const EntireLayout = styled(Layout)`
+    display: flex;
+    min-width: 1440px;
+    min-height: 100vh;
+    background-color: #f8f3fc;
+`
 
+export const WrapContent = styled(Layout)`
+    margin: 24px 16px 0;
+    overflow: initial;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+`

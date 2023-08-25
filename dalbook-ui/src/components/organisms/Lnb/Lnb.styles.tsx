@@ -5,17 +5,16 @@ const {Sider} = Layout;
 
 export const CustomSider = styled(Sider)`
  &&& {
-    min-width: 250px;
-    width: 250px;
+    background-color: #FFFFFF;
   }
 `;
 
-export const lnbLogoStyle: React.CSSProperties = {
-    height: '32px',
-    margin: '16px',
-    background: 'rgba(255,255,255,.2)',
-    borderRadius: '6px'
-};
+export const LnbLogo = styled('div')`
+    height: 32px;
+    margin: 16px;
+    background-color: #000000;
+    borderRadius: 6px;
+`;
 
 const ButtonDefault = `
     display: inline-flex;
@@ -38,8 +37,6 @@ const ButtonDefault = `
     color: rgb(99, 115, 129);
     transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     padding: 4px;
-    top: 32px;
-    position: fixed;
     z-index: 1101;
 `
 

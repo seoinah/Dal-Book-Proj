@@ -1,14 +1,16 @@
-import { styled } from '@mui/material/styles';
+import styled from "styled-components";
+import { Layout, Row } from 'antd';
+const { Header } = Layout;
 
-export const HeaderDoc = styled('header')`
-  -webkit-text-stroke: 1px #000000;
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 30px;
-  font-weight: 500;
-  left: 376px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 39px;
+export const ContentHeader = styled(Header)`
+    display: inline-table;
+    padding: 0;
+    background-color: #f8f3fc;
+`
+export const TitleRow = styled(Row)`
+    padding: 0 15px;
+`;
+
+export const TitleH1 = styled("h1")`
+    margin: auto;
 `;

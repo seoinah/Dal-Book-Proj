@@ -6,8 +6,8 @@ import {
     VideoCameraOutlined,
 } from '@ant-design/icons';
 import useToggle from "@common/hooks/useToggle";
-import {CustomSider, FoldButton, UnFoldButton, lnbLogoStyle} from "@components/organisms/Lnb/Lnb.styles";
-import {Tooltip, Menu} from "antd";
+import {CustomSider, FoldButton, UnFoldButton, LnbLogo} from "@components/organisms/Lnb/Lnb.styles";
+import {ConfigProvider, Menu} from "antd";
 
 const menu = [
     {
@@ -32,16 +32,26 @@ const Lnb = () => {
 
     return (
         <CustomSider trigger={null} collapsible collapsed={fold} >
-            <div className="demo-logo-vertical" style={lnbLogoStyle}/>
+            <LnbLogo/>
+            <ConfigProvider
+                theme={{
+                    components: {
+                        Menu: {
+                            colorItemBgSelected: "#8363FB",
+                            colorItemTextSelected: "#FFFFFF",
+                        },
+                    },
+                }}
+            >
             <Menu
-                theme="dark"
+                theme="light"
                 mode="inline"
                 defaultSelectedKeys={['1']}
                 items={menu}
             />
-            <Tooltip title="Menu">
-                {
-                    fold?
+            </ConfigProvider>
+            {
+                fold?
                     <UnFoldButton
                         shape="circle"
                         icon={<RightOutlined />}
@@ -53,8 +63,7 @@ const Lnb = () => {
                         icon={<LeftOutlined />}
                         onClick={() => setFold(!fold)}
                     />
-                }
-            </Tooltip>
+            }
         </CustomSider>
     );
 };
