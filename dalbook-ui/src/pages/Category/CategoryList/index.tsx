@@ -11,9 +11,7 @@ const CategoryList = () => {
                 <CreateButton title={"항목 등록"}/>
             </Title>
             <ContentLayout>
-                <div>
-                    category
-                </div>
+
             </ContentLayout>
         </WrapLayout>
 

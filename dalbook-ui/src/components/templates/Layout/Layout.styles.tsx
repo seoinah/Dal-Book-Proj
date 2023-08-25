@@ -15,7 +15,7 @@ export const EntireLayout = styled(Layout)`
 `
 
 export const WrapContent = styled(Layout)`
-    margin: 24px 16px 0;
+    margin: 0 16px;
     overflow: initial;
     background-color: #FFFFFF;
     border-radius: 25px;
