@@ -6,7 +6,7 @@ import {
     VideoCameraOutlined,
 } from '@ant-design/icons';
 import useToggle from "@common/hooks/useToggle";
-import {CustomSider, FoldButton, lnbLogoStyle} from "@components/organisms/Lnb/Lnb.styles";
+import {CustomSider, FoldButton, UnFoldButton, lnbLogoStyle} from "@components/organisms/Lnb/Lnb.styles";
 import {Tooltip, Menu} from "antd";
 
 const menu = [
@@ -40,11 +40,20 @@ const Lnb = () => {
                 items={menu}
             />
             <Tooltip title="Menu">
-                <FoldButton
-                    shape="circle"
-                    icon={fold ? <RightOutlined /> : <LeftOutlined />}
-                    onClick={() => setFold(!fold)}
-                />
+                {
+                    fold?
+                    <UnFoldButton
+                        shape="circle"
+                        icon={<RightOutlined />}
+                        onClick={() => setFold(!fold)}
+                    />
+                    :
+                    <FoldButton
+                        shape="circle"
+                        icon={<LeftOutlined />}
+                        onClick={() => setFold(!fold)}
+                    />
+                }
             </Tooltip>
         </CustomSider>
     );
