@@ -1,16 +1,15 @@
-import {ContentHeader, TitleH1, TitleRow} from "@components/organisms/Title/Title.styles";
-import { Col } from 'antd';
+import {ContentHeader, TitleBtnArea, TitleH1, TitleH1Area, TitleRow} from "@components/organisms/Title/Title.styles";
 
 const Title = ({title, children}) => {
     return (
         <ContentHeader>
             <TitleRow>
-                <Col span={8}>
+                <TitleH1Area span={8}>
                     <TitleH1>{title}</TitleH1>
-                </Col>
-                <Col span={8} offset={8}>
+                </TitleH1Area>
+                <TitleBtnArea span={8} offset={8}>
                     {children}
-                </Col>
+                </TitleBtnArea>
             </TitleRow>
         </ContentHeader>
     );
