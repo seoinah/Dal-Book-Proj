@@ -38,6 +38,7 @@ const ButtonDefault = `
     transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     padding: 4px;
     z-index: 1101;
+    top: -185px;
 `
 
 export const FoldButton = styled(Button)`
